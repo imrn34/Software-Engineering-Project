@@ -143,7 +143,7 @@ namespace SE_Project_Distance_Converter
 
                 if (righttext.Text == "")
                 {
-                    Double a = Convert.ToDouble(lefttext.Text);
+                    Decimal a = Convert.ToDecimal(lefttext.Text);
                     if ((leftcom.SelectedIndex == 0) && (rightcom.SelectedIndex == 0))
                     { righttext.Text = "" + a; }
                     if ((leftcom.SelectedIndex == 0) && (rightcom.SelectedIndex == 1))
@@ -186,7 +186,7 @@ namespace SE_Project_Distance_Converter
 
                 if (lefttext.Text == "")
                 {
-                    Double b = Convert.ToDouble(righttext.Text);
+                    Decimal b = Convert.ToDecimal(righttext.Text);
 
                     if ((rightcom.SelectedIndex == 0) && (leftcom.SelectedIndex == 0))
                     { lefttext.Text = "" + b; }
