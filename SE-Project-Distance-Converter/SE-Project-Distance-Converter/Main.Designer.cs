@@ -40,6 +40,7 @@
             this.lefttext.Name = "lefttext";
             this.lefttext.Size = new System.Drawing.Size(120, 20);
             this.lefttext.TabIndex = 0;
+            this.lefttext.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lefttext_MouseClick);
             // 
             // righttext
             // 
@@ -47,6 +48,7 @@
             this.righttext.Name = "righttext";
             this.righttext.Size = new System.Drawing.Size(120, 20);
             this.righttext.TabIndex = 0;
+            this.righttext.MouseClick += new System.Windows.Forms.MouseEventHandler(this.righttext_MouseClick);
             // 
             // leftcom
             // 
@@ -60,6 +62,7 @@
             this.leftcom.Name = "leftcom";
             this.leftcom.Size = new System.Drawing.Size(120, 21);
             this.leftcom.TabIndex = 1;
+            this.leftcom.SelectedIndexChanged += new System.EventHandler(this.leftcom_SelectedIndexChanged);
             // 
             // rightcom
             // 
@@ -73,6 +76,7 @@
             this.rightcom.Name = "rightcom";
             this.rightcom.Size = new System.Drawing.Size(120, 21);
             this.rightcom.TabIndex = 2;
+            this.rightcom.SelectedIndexChanged += new System.EventHandler(this.rightcom_SelectedIndexChanged);
             // 
             // Main
             // 

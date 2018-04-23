@@ -18,6 +18,10 @@ namespace SE_Project_Distance_Converter
             leftcom.SelectedIndex = 0;
             rightcom.SelectedIndex = 0;
         }
+        private void close(object sender, System.EventArgs e)
+        {
+            Close();
+        }
 
         private void Main_Load(object sender, EventArgs e)
         {
@@ -74,6 +78,7 @@ namespace SE_Project_Distance_Converter
             Btn.ForeColor = Color.Wheat;
             Btn.Location = new Point(0, 135);
             Btn.FlatAppearance.BorderSize = 0;
+            Btn.Click += new EventHandler(run);
             this.Controls.Add(Btn);
 
 
@@ -86,6 +91,7 @@ namespace SE_Project_Distance_Converter
             ext.BackColor = Color.Wheat;
             ext.ForeColor = Color.Black;
             ext.Location = new Point(380, 0);
+            ext.Click += new EventHandler(close);
             this.Controls.Add(ext);
 
 
@@ -122,6 +128,38 @@ namespace SE_Project_Distance_Converter
             val.Location = new Point(20, 91);
             this.Controls.Add(val);
 
+        }
+        private void run(object sender, System.EventArgs e)
+
+        {
+            try
+            {
+            }
+
+            catch
+            {
+            }
+
+        }
+
+        private void leftcom_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lefttext.Text = "";
+        }
+
+        private void rightcom_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            righttext.Text = "";
+        }
+
+        private void lefttext_MouseClick(object sender, MouseEventArgs e)
+        {
+            righttext.Text = "";
+        }
+
+        private void righttext_MouseClick(object sender, MouseEventArgs e)
+        {
+            lefttext.Text = "";
         }
     }
 }
