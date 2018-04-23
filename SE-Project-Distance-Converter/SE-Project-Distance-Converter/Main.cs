@@ -134,10 +134,104 @@ namespace SE_Project_Distance_Converter
         {
             try
             {
-            }
 
+                if ((lefttext.Text != "") & (righttext.Text != ""))
+
+                { MessageBox.Show("Both value space cannot be full! Please select value space that you want to convert."); }
+
+
+
+                if (righttext.Text == "")
+                {
+                    Double a = Convert.ToDouble(lefttext.Text);
+                    if ((leftcom.SelectedIndex == 0) && (rightcom.SelectedIndex == 0))
+                    { righttext.Text = "" + a; }
+                    if ((leftcom.SelectedIndex == 0) && (rightcom.SelectedIndex == 1))
+                    { righttext.Text = "" + (a / 10); }
+                    if ((leftcom.SelectedIndex == 0) && (rightcom.SelectedIndex == 2))
+                    { righttext.Text = "" + (a / 1000); }
+                    if ((leftcom.SelectedIndex == 0) && (rightcom.SelectedIndex == 3))
+                    { righttext.Text = "" + (a / 1000000); }
+
+                    if ((leftcom.SelectedIndex == 1) && (rightcom.SelectedIndex == 0))
+                    { righttext.Text = "" + a * 10; }
+                    if ((leftcom.SelectedIndex == 1) && (rightcom.SelectedIndex == 1))
+                    { righttext.Text = "" + a; }
+                    if ((leftcom.SelectedIndex == 1) && (rightcom.SelectedIndex == 2))
+                    { righttext.Text = "" + (a / 100); }
+                    if ((leftcom.SelectedIndex == 1) && (rightcom.SelectedIndex == 3))
+                    { righttext.Text = "" + (a / 100000); }
+
+                    if ((leftcom.SelectedIndex == 2) && (rightcom.SelectedIndex == 0))
+                    { righttext.Text = "" + (a * 1000); }
+                    if ((leftcom.SelectedIndex == 2) && (rightcom.SelectedIndex == 1))
+                    { righttext.Text = "" + (a * 100); }
+                    if ((leftcom.SelectedIndex == 2) && (rightcom.SelectedIndex == 2))
+                    { righttext.Text = "" + a; }
+                    if ((leftcom.SelectedIndex == 2) && (rightcom.SelectedIndex == 3))
+                    { righttext.Text = "" + (a / 1000); }
+
+                    if ((leftcom.SelectedIndex == 3) && (rightcom.SelectedIndex == 0))
+                    { righttext.Text = "" + (a * 1000000); }
+                    if ((leftcom.SelectedIndex == 3) && (rightcom.SelectedIndex == 1))
+                    { righttext.Text = "" + (a * 100000); }
+                    if ((leftcom.SelectedIndex == 3) && (rightcom.SelectedIndex == 2))
+                    { righttext.Text = "" + (a * 1000); }
+                    if ((leftcom.SelectedIndex == 3) && (rightcom.SelectedIndex == 3))
+                    { righttext.Text = "" + a; }
+
+                }
+
+
+
+                if (lefttext.Text == "")
+                {
+                    Double b = Convert.ToDouble(righttext.Text);
+
+                    if ((rightcom.SelectedIndex == 0) && (leftcom.SelectedIndex == 0))
+                    { lefttext.Text = "" + b; }
+                    if ((rightcom.SelectedIndex == 0) && (leftcom.SelectedIndex == 1))
+                    { lefttext.Text = "" + (b / 10); }
+                    if ((rightcom.SelectedIndex == 0) && (leftcom.SelectedIndex == 2))
+                    { lefttext.Text = "" + (b / 1000); }
+                    if ((rightcom.SelectedIndex == 0) && (leftcom.SelectedIndex == 3))
+                    { lefttext.Text = "" + (b / 1000000); }
+
+                    if ((rightcom.SelectedIndex == 1) && (leftcom.SelectedIndex == 0))
+                    { lefttext.Text = "" + b * 10; }
+                    if ((rightcom.SelectedIndex == 1) && (leftcom.SelectedIndex == 1))
+                    { lefttext.Text = "" + b; }
+                    if ((rightcom.SelectedIndex == 1) && (leftcom.SelectedIndex == 2))
+                    { lefttext.Text = "" + (b / 100); }
+                    if ((rightcom.SelectedIndex == 1) && (leftcom.SelectedIndex == 3))
+                    { lefttext.Text = "" + (b / 100000); }
+
+                    if ((rightcom.SelectedIndex == 2) && (leftcom.SelectedIndex == 0))
+                    { lefttext.Text = "" + (b * 1000); }
+                    if ((rightcom.SelectedIndex == 2) && (leftcom.SelectedIndex == 1))
+                    { lefttext.Text = "" + (b * 100); }
+                    if ((rightcom.SelectedIndex == 2) && (leftcom.SelectedIndex == 2))
+                    { lefttext.Text = "" + b; }
+                    if ((rightcom.SelectedIndex == 2) && (leftcom.SelectedIndex == 3))
+                    { lefttext.Text = "" + (b / 1000); }
+
+                    if ((rightcom.SelectedIndex == 3) && (leftcom.SelectedIndex == 0))
+                    { lefttext.Text = "" + (b * 1000000); }
+                    if ((rightcom.SelectedIndex == 3) && (leftcom.SelectedIndex == 1))
+                    { lefttext.Text = "" + (b * 100000); }
+                    if ((rightcom.SelectedIndex == 3) && (leftcom.SelectedIndex == 2))
+                    { lefttext.Text = "" + (b * 1000); }
+                    if ((rightcom.SelectedIndex == 3) && (leftcom.SelectedIndex == 3))
+                    { lefttext.Text = "" + b; }
+
+                }
+
+
+
+            }
             catch
             {
+                MessageBox.Show("Please Enter integer Value!");
             }
 
         }
