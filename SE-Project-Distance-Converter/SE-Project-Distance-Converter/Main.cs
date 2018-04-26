@@ -231,7 +231,7 @@ namespace SE_Project_Distance_Converter
             }
             catch
             {
-                MessageBox.Show("Please Enter integer Value!");
+                MessageBox.Show("Please Enter Number Value!");
             }
 
         }
